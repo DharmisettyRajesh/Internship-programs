@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Java Scriot example</title>
+        <style>
+
+        </style>
+        <script>
+            function add(){
+                event.preventDefault();
+                let a=parseInt(document.getElementById("num1").value);
+                let b=parseInt(document.getElementById("num2").value);
+                var c=a+b;
+                console.log(c);
+                alert(c);
+            }
+            function sub(){
+                event.preventDefault();
+                console.log("hello");
+                var a=parseInt(document.getElementById("num1").value);
+                
+                var b=parseInt(document.getElementById("num2").value);
+                
+                var c=a-b;
+                console.log(c);
+                alert(c);
+                
+            }
+            function mul(){
+                
+                var a=parseInt(document.getElementById("num1").value);
+                var b=parseInt(document.getElementById("num2").value);
+                var c=a*b;
+                console.log(c);
+                alert(c);
+            }
+            function div(){
+                event.preventDefault();
+                var a=parseInt(document.getElementById("num1").value);
+                var b=parseInt(document.getElementById("num2").value);
+                var c=eval (a/b);
+                console.log(c);
+                alert(c);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+            <table>
+                <tr>
+                    <td>Enter First Number</td>
+                    <td><input type="number" id="num1" /></td>
+                </tr>
+                <tr>
+                    <td>Enter Second Number</td>
+                    <td><input type="number" id="num2"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="+" style="padding:10px;" name="Add" onclick="add()" />
+                        <input type="submit" value="-" style="padding:10px;" name="sub" onclick="sub()" />
+                    
+                        <input type="submit" value="*" style="padding:10px;" name="mul" onclick="mul()" />
+                        <input type="submit" value="/" style="padding:10px;" name="div" onclick="div()" />
+                    </td>
+                </tr>
+                <p id="result"></p>
+            </table>
+        </form>
+        </div>
+    </body>
+</html>

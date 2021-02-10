@@ -1,0 +1,311 @@
+<!-- Employee details Form-->
+<html>
+    <head>
+        <title>
+            Employee details form
+        </title>
+        <script>
+            var a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=1;
+            function validatefname(){
+                var a=document.getElementById("fname").value;
+                var b=/[0-9]/;
+                var c=/[A-Za-z]/;
+                if(a==" " || a==null ){
+                    document.getElementById("fnameerror").innnerHTML="Name must not be empty!";
+                }
+                else if(a.match(b)){
+                    document.getElementById("fnameerror").innerHTML ="name must contain characters"; 
+                }
+                else if(a.length<2|| a.length>=20 ){
+                    document.getElementById("fnameerror").innerHTML="Name Must be greaterthan 2 characters and lessthan 21 characters";
+                }
+                else if(!a.match(c)){
+                    document.getElementById("fnameerror").innerHTML="Name must contain only characters"
+                }
+                else{
+                    a=1;
+                    document.getElementById("fnameerror").innerHTML ="👍validated";
+                }
+            }
+            function validatelname(){
+                var a=document.getElementById("lname").value;
+                var b=/[0-9]/;
+                var c=/[A-Za-z]/;
+                console.log(a);
+                if(a==" " || a==null ){
+                    document.getElementById("fnameerror1").innnerHTML="Name must not be empty!";
+                }
+                else if(a.match(b)){
+                    document.getElementById("fnameerror1").innerHTML ="name must contain characters"; 
+                }
+                else if(a.length<2|| a.length>=20 ){
+                    document.getElementById("fnameerror1").innerHTML="Name Must be greaterthan 4 characters and lessthan 21 characters";
+                }
+                else if(!a.match(c)){
+                    document.getElementById("fnameerror1").innerHTML="Name must contain only characters"
+                }
+                else{
+                    b=1;
+                    document.getElementById("fnameerror1").innerHTML ="👍validated";
+                }
+            }
+            function validateuname(){
+                var a=document.getElementById("uname").value;
+                var b=/[A-Za-z0-9]+[@!#$%^&]/;
+                console.log(a);
+                if(a==" " || a==null ){
+                    document.getElementById("fnameerror2").innnerHTML="password must not be empty!";
+                }
+                else if(a.match(b)){
+                    document.getElementById("fnameerror2").innerHTML ="Userpassword must contain Alpha numeric characters and containatleast one special character"; 
+                }
+                else if(a.length<5|| a.length>=20 ){
+                    document.getElementById("fnameerror2").innerHTML="password Must be greaterthan 5 characters and lessthan 21 characters";
+                }
+                else{
+                    c=1;
+                    document.getElementById("fnameerror2").innerHTML ="👍validated";
+                }
+
+            }
+            var pass="pass";
+            function validatepassword(){
+                var a=document.getElementById("password").value;
+                pass=a;
+                var b=/[A-Za-z0-9]/;
+                console.log(a);
+                if(a==" " || a==null ){
+                    document.getElementById("fnameerror3").innnerHTML="Name must not be empty!";
+                }
+                else if(!a.match(b)){
+                    document.getElementById("fnameerror3").innerHTML ="Password is not strong"; 
+                }
+                else if(a.length<3|| a.length>=20 ){
+                    document.getElementById("fnameerror3").innerHTML="Name Must be greaterthan 3 characters and lessthan 21 characters";
+                }
+                else{
+                    d=1;
+                    document.getElementById("fnameerror3").innerHTML ="👍validated";
+                }
+            }
+
+            function reenterpassword1(){
+
+                var a=document.getElementById("password1").value;
+                console.log(a);
+                console.log("pss",pass);
+                if(a.length==0){
+                    document.getElementById("fnameerror4").innerHTML="Password Mismatch";
+
+                }
+                else if(pass!==a){
+                    document.getElementById("fnameerror4").innerHTML="Password Mismatch";
+                }
+                else{
+                    e=1;
+
+                    document.getElementById("fnameerror4").innerHTML="👍validated";
+                }
+            }
+            function email1(){
+                var a=document.getElementById("email").value;
+                var b=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(a-zA-Z)+.com|.co|.in/;
+                console.log(a);
+                if(!a.match(b)){
+                    document.getElementById("fnameerror5").innerHTML ="plese enter valid email";
+
+                }
+                else{
+                    f=1;
+                    document.getElementById("fnameerror5").innerHTML ="validated";
+                }
+            }
+            function phoneno1(){
+                var a= document.getElementById("phoneno").value;
+                var b=/A-Za-z/;
+                if(a.match(b)){
+                    document.getElementById("fnameerror6").innerHTML="Numbers are allowed only";
+                }
+                else if(a.length!=9 &&  a.length!=10){
+                    document.getElementById("fnameerror6").innerHTML=`phoneno has ${a.length+1} digits is invalid`;
+
+                }
+                else{
+                    g=1
+                    document.getElementById("fnameerror6").innerHTML="valid";
+
+                }
+            }
+            
+            function gender1(from){
+                console.log(student.gender[0].checked);
+                if(student.gender[0].checked==false && student.gender[1].checked==false){
+                    document.getElementById("fnameerror7").innerHTML="select your gender";
+                }
+                else{
+                    h=1;
+                    document.getElementById("fnameerror7").innerHTML="Gender Selected";
+
+                }
+                
+            }
+            function submit1(){
+                event.preventDefault();
+                console.log("hello");
+                if(a==0 || b==0 || c==0||d==0|| e==0||f==0||g==0||h==0){
+                    validatefname();
+                    validatelname();
+                    validateuname();
+                    validatepassword();
+                    reenterpassword1();
+                    email1();
+                    phoneno1();
+                    gender1("form");
+
+                }
+                else{
+                    alert("thank for Registration");
+                }
+            }
+            
+        </script>
+        <style>
+        .body{
+            background-color:#9c7d7d33;
+            background-image:url('data:image/jpeg;base64,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');
+            background-size:cover;
+        }
+        div{
+            border:0.1px solid #ad9a9a33;
+            border-radius:10px;
+            width:40%;
+            margin-left:20%;
+            margin-right:10%;
+            margin-top:5%;
+            padding-right:5%;
+            
+            
+            /*box-shadow: 10px 10px 8px rgb(24, 185, 206);*/
+        }
+        .div1{
+            margin-left:8%;
+            background-color:#c0b9b9;
+            padding-left:5%;
+            padding-right:50%;
+            box-shadow:10px 8px 8px rgb(214, 208, 208);
+        }
+        .inputstyle1{
+            
+            width:200%;
+            padding:2px;
+            background-color:#c0b9b9;
+            outline-style:none;
+            border:1px solid #c0b9b9;
+            border-bottom:2px solid black;
+            font-size:18px;
+            border-radius: 2px solid black;
+            color:white;
+        }
+        .inputstyle1:focus{
+        outline: none;
+        color:yellow;
+        border-bottom:3px solid lightgreen;
+        border-radius:3px solid lightgreen;
+        }
+        .errorstyle{
+            font-size:20px;
+            width:200%;
+            margin-top:-3px;
+            font-weight:700;
+           
+            color:rgb(201, 79, 150);
+        }
+        .div2{
+            padding-left:-30%;
+            margin-left:8%;
+            background-color:#6f9fa5;
+            padding-left:5%;
+            padding-right:50%;
+        }
+        .button2{
+            background-color:rgb(134, 53, 80);
+            text-align:center;
+            padding-right:-2rem;
+            width:150%;
+            padding:3%;
+            font-size: 20px;    
+            border:8px solid rgb(56, 163, 154);
+            border-radius:200cm ;
+        }
+        .button2:hover{
+            background-color:lightgreen;
+            border:8px solid yellow;
+        }
+        </style>
+    </head>
+    <body class="body">
+        <form name="student" onsubmit="submit1()">
+            <h1 style="padding-left:30%;">Rajeshorg Forms</h1>
+        <div class="div">
+            <div class="div2">
+                <h3><pre>This informContains Details about your personal information
+And this Form details could not be shared with anyone .
+The details are stored in the are very secured and could not
+surpass this details are not given to anyone.
+Here '<span style="color:red;font-size: 20px;">*</span>' requiired field
+                </pre></h3>
+                
+            </div>
+            <div class="div1">
+                <h3><pre>What is Your First Name?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="text" class="inputstyle1" onfocus="validatefname()" onkeypress="validatefname()" id="fname"  />
+                <p id="fnameerror" class="errorstyle" ></p>
+            </div>
+            <div class="div1">
+                <h3><pre>What is Your Last Name?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="text" class="inputstyle1" onblur="validatelname()" onkeypress="validatelname()" id="lname"  />
+                <p id="fnameerror1" class="errorstyle" ></p>
+            </div>
+            <div class="div1">
+                <h3><pre>choose your username?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="text" class="inputstyle1" onblur="validateuname()" onkeypress="validateuname()" id="uname"  />
+                <p id="fnameerror2" class="errorstyle"></p>
+            </div>
+            <div class="div1">
+                <h3><pre>choose your Password?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="text" class="inputstyle1" onblur="validatepassword()" onkeypress="validatepassword()" id="password"  />
+                <p id="fnameerror3" class="errorstyle" ></p>
+            </div>
+            <div class="div1">
+                <h3><pre>confirm your Password?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="text" class="inputstyle1" onblur="reenterpassword1()" onkeypress="reenterpassword1()" id="password1" />
+                <p id="fnameerror4" class="errorstyle" ></p>
+            </div>
+            <div class="div1">
+                <h3><pre>confirm your Email?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="email" class="inputstyle1" onblur="email1()" onkeypress="email1()" id="email" />
+                <p id="fnameerror5" class="errorstyle" ></p>
+            </div>
+
+            <div class="div1">
+                <h3><pre>Enter your Phoneno?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input type="number" class="inputstyle1" onblur="phoneno1()" onkeypress="phoneno1()" id="phoneno" />
+                <p id="fnameerror6" class="errorstyle" ></p>
+            </div>
+            <div class="div1">
+                <h3><pre>Select your Gender?<span style="padding-top:10%;color:red;font-size:20px;">*</span></pre></h3>
+                <input style="background-color: green;" type="radio"  name="gender" onblur="gender1(this.form)"  value="m" onkeypress="gender1(this.from)" id="gender" >MALE </input>
+                <input type="radio"  name="gender" onblur="gender1(this.form)" value="f" onkeypress="gender2(this.form)" id="gender2" >FEMALE </input>
+                <p id="fnameerror7" class="errorstyle" ></p>
+            </div>
+            <div>
+                <input class="button2" type="submit" value="submit"  />
+                <br />
+                <br />
+                <input class="button2" type="submit" value="submit"  />
+            </div>
+        </div>
+    </form>
+        
+    </body>
+</html>

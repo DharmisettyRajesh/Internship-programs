@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Student Form
+        </title>
+        <style>
+            body
+            {
+                background-color: linear-gradient(to right bottom ,lightgreen,lightgrey);
+            }
+            body>div{
+                box-shadow:10px 10px 8px 8px #bed6d8;
+            }
+        </style>
+    </head>
+    <body style="background: linear-gradient(to right bottom,#73c9e4,#33a8d6);">
+         <div  align=center style="border:1px solid yellow;border-radius:15px;width:45%;margin-left:30%;padding-right:5%;margin-top: 7%;background-color:rgb(169, 123, 206);">
+         <h1 align=center style="text-align:center;color:linear-gradient(to right bottom,red,yellow);padding-left:10%;">Student Details form for college Admission</h1> 
+          <form>
+           <table align=center style="margin-top:3%;padding-left:-5%;" cellpadding=10px;> 
+             <tr style="padding-bottom:10%;">
+                 <td style="font-weight:700;padding-right:30%;font-size:18px"><b>FirstName</b></td>
+                 <td style="padding-left:10%;"><input  style="width:180%;padding:4%;border-radius:10px;border:3px solid linear-gradient(to right bottom ,blue,magenta);" type="text" name="fname" placeholder="please enter your first name" /></td>
+             </tr>
+             <tr  style="padding-bottom:10%;">
+                <td style="font-weight:700;padding-right:30%;font-size:18px"><b>LastName</b></td>
+                <td style="padding-left:10%;"><input style="width:180%;padding:4%;border-radius:10px;border:3px solid linear-gradient(to right bottom ,blue,magenta);" type="text" name="lname" placeholder="please enter your last name" required /></td>
+            </tr>
+            <tr >
+                <td style="font-weight:700;padding-right:30%;font-size:18px;border-radius:10px;border:3px solid linear-gradient(to right bottom ,blue,magenta);"><b>email</b></td>
+                <td style="padding-left:10%;"><input style="font-size:15px;width:180%;padding:4%;border-radius:10px;border:3px solid linear-gradient(to right bottom ,blue,magenta);" type="text" name="email" placeholder="please enter your Email" /></td>
+            </tr>
+            <tr >
+                <td style="font-weight:900;font-size:18px;padding-right:30%;"><b>Phoneno</b></td>
+                <td style="padding-left:10%"><input style="width:180%;padding:4%;border-radius:10px;border:3px solid linear-gradient(to right bottom ,blue,magenta);" type="text" name="phoneno" placeholder="enter your phone number" /></td>
+            </tr>
+            <tr>
+                <td style="font-weight:900;font-size:18px;">
+                    Gender
+                </td>
+                <td style="padding-left:10%;">
+                    <input type="radio" name="gender"  value="male" >Male</input>
+                    <input   type="radio" name="gender" value="female">FeMale</input>
+
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:900;font-size:18px;">
+                   Date-Of-Birth
+                </td>
+                <td style="padding-left:10%;">
+                    <input type="date" style="width:180%;border-radius:10px;font-size:18px;padding-right:30%;" />
+
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:900;font-size:18px;">Languages Known</td>
+                <td style="padding-left:10%;">
+                <input    type="checkbox" name="gender" value="telugu"><span style="font-weight:800;font-size:18px;">Telugu</span></input>
+                <input    type="checkbox" name="gender" value="telugu"><span style="font-weight:800;font-size:18px;">English</span></input>
+
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight:900;font-size:18px;">
+                    Highest Qualification
+                </td>
+                <td style="padding-left:10%;">
+                    <select style="padding-left:25%;padding-top:3%;padding-bottom:3%;padding-right:25%;border-radius:10px;"name="qualification" id="qualification">
+                        <option>10TH</option>
+                        <option >Inter</option>
+                        <option>Degree</option>
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                        <option>MBA</option>
+                        <option>MCA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left:10%;"><input  style="background-color:#3fb0ac;padding:10px;color:white;border-radius:10px;padding-left:10%;padding-right:10%;"type="submit" /></td>
+            </tr>
+        </form>
+         </table>
+        </div>
+    </body>
+</html>

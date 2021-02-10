@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>
+            Calculator using javascript
+        </title>
+        <style>
+            .container{
+                border:1px solid red;
+                margin-left:30%;
+                margin-top:3%;
+                width:45%;
+            }
+            input:focus{
+                border:none;
+            }
+            .button-style{
+                text-align:center;
+                color:white;
+                width:40px;  
+                height:30px;  
+                border:none;  
+                border-radius:8px;  
+                margin-left:17px;  
+                cursor:pointer;  
+                border-top:2px solid transparent;
+                color:black;  
+                background-color:hsl(180, 54%, 46%);  
+                border-bottom:black 2px solid; 
+                
+
+            }
+            .button-style1{
+                text-align:center;
+                width:40px;  
+                height:30px;  
+                border:none;  
+                border-radius:8px;  
+                margin-left:17px;  
+                cursor:pointer;  
+                color:white;  
+                background-color:303030;  
+                border-bottom:black 2px solid;  
+                border-top:2px 303030 solid; 
+            }
+
+        </style>
+        <script>
+            var a="";
+            function add(b){
+                
+                a=a+b;
+                document.getElementById("output").value=a;
+
+            }
+            function result(){
+                    var val=document.getElementById("output").value;
+                    var y=eval(val);
+                    document.getElementById("output").value=y;
+                    a="";
+            }
+            function update(){
+                var b=a.length;
+                 a=a.substring(0,b-1);
+                 console.log(a);
+                document.getElementById("output").value=a;
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin-top:10%;" >
+            <table style="box-shadow: 10px 8px 8px black;padding-top:5%;border-radius:10%;padding-right:1%;" bgcolor="#4F4846"  cellpadding="10" align=center  >
+                
+                <tr>
+                    <td colspan="4">
+                      <input style="padding:10px; border:none;width:100%;border-radius:10px;" type="text" id="output" />
+                    </td>
+                </tr>
+                <tr >
+                    <td ><input class="button-style1" style="text-decoration: none;" class type="button" onclick="add('1')" value="1" id="1" /> </td>
+                    <td><input  class="button-style1" style="padding:-50%;" type="button" onclick="add('2')" value="2" id="1" /> </td>
+                    <td><input  class="button-style1" style="text-decoration: none;;" type="button" onclick="add('3')" value="3" id="1" /></td>
+                    <td><input class="button-style" style="text-decoration: none;;" type="button" onclick="update()" value="←" id="1" /></td>
+
+                </tr>
+                <tr>
+                    <td><input class="button-style1" style="text-decoration: none;;" type="button" onclick="add('4')" value="4" id="1" /></td>
+                    <td><input class="button-style1" style="text-decoration: none;;" type="button" onclick="add('5')" value="5" id="1" /></td>
+                    <td><input  class="button-style1" style="text-decoration: none;;" type="button" onclick="add('6')" value="6" id="1" /></td>
+                    <td><input class="button-style" style="text-decoration: none;;" type="button" onclick="add('+')" value="+" id="1" /></td>
+                </tr>
+                <tr>
+                    <td><input  class="button-style1" style="text-decoration: none;;" type="button" onclick="add('7')" value="7" id="1" /></td>
+                    <td><input  class="button-style1" style="text-decoration: none;;" type="button" onclick="add('8')" value="8" id="1" /></td>
+                    <td><input class="button-style1" style="text-decoration: none;;" type="button" onclick="add('9')" value="9" id="1" /></td>
+                    <td><input class="button-style" style="text-decoration: none;;" type="button" onclick="add('-')" value="-" id="1" /></td>
+                </tr>
+                <tr>
+                    <td   style="text-align:center;"><input  class="button-style1" style="text-decoration: none;;" type="button" onclick="add('0')" value="0" id="1" /></td>
+                    <td><input  class="button-style" style="text-decoration: none;;" type="button" onclick="result()" value="=" id="res" /></td>
+                    <td><input class="button-style" style="text-decoration: none;;" type="button" onclick="add('*')" value="*" id="1" /></td>
+                    <td><input class="button-style" style="text-decoration: none;;" type="button" onclick="add('/')" value="/" id="1" /></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+lab-1 File Manipulation commands:
+1.Create a file myfile.txt in your folder and add some content?
+Ans.Initially create a new Folder and the folder name is Internship Project and the file in folder is myfile1.txt .
+command:
+	$cat >myfile1.txt 
+	this file contains sensitive information and insensitive information
+	$
+when we output the above file using myfile1.txt it will show the input"this file contains sensitive information and insensitive information."
+2. Append new content to existing file myfile1.txt?
+ans.first crete a file and file contains some information myfile1.txt and append some content to the file using the following command
+ $cat >>myfile1.txt
+	hello how are you
+ $
+
+3.display the contents of a file?
+Ans.inoreder to display the contents of file is use the fllowing command
+$cat myfile1.txt
+this file contains sensitive information and insensitive information hello how are you
+4.Copy the file myfile1.txt to your desktop?
+command :
+$cp myfile1.txt Desktop/myfile2.txt
+$
+5.Rename the file myfile1.txt to testfile1.txt?
+ans.command:
+$ mv myfile1.txt testfile1.txt
+
+$
+6.Delete the file myfile1.txt which is your in desktop?
+Ans.command
+$rm myfile1.txt
+$
+7.Display the content of the myfile1.txt file with line numbers?
+Ans.
+command:
+$cat -b myfile1.txt
+1.this file contains sensitive information and insensitive information hello hoe are you
+$
+Lab-2:Directory commands
+8.Create a directory/folder with your name in your Desktop?
+Ans.My name is Rajesh and it is created in Home directory.
+$cd Home
+~Home $mkdir Rajesh
+~Home$
+9.Change your path to that directory?
+Ans.By using cd command follwed by directory Name 
+command:
+$cd directoryname
+$
+10.Create new folders namely sample1, sample2 and copy your myfile1.txt in to sample1?
+Ans.firstly create two directories sample1 and sample2 
+the sample2 file is demo.txt
+"hi hello"
+the contents of smappl2/demo.txt is moved to sample1/mkdir.txt with the following command
+
+$cp sample2/demo.txt sample1/mkdir.txt
+$
+11. Create more files in sample1?
+the following command will cereate multiple files using touch command
+$touch demo1.txt demo2.txt demo3.txt
+$
+12.Copy all the files in sample1 folder to sample2 folder?
+the copy of all files from folder smaple1 to sample2 with the folloeing command
+$cp -r sample1 sample2
+13.. Delete sample2 folder?
+command:
+$ rm -r sample1
+$
+14. Unix command to display all the files present in the current directory along with hidden
+files?
+command :
+$ls -a
+$
+15.5. Command used to estimate the file usage ?
+
+command:
+$df mkdir.txt
+$
+16. Unix command used to change the file owner?
+command:
+$chown Rajesh mkdir.txt
+$
+17. How can we make links between files?
+Ans.Command:
+$ln -l demo1.txt demo2.txt
+$
